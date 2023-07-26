@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+
+<link href="{% static '/css/styles.css' %}" rel="stylesheet" />
+<link href="{% static '/css/styles2.css' %}" rel="stylesheet" />
+
+{% endblock %}
+
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+  <div class="container px-5">
+      <a class="navbar-brand" href="/"><img src="{% static '\img\logo_rkd.png' %}" alt="Logo rkd" class="logo-img"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="#!">Sobre Nosotros</a></li>
+              <li class="nav-item"><a class="nav-link" href="#!">Servicios</a></li>
+              <li class="nav-item"><a class="nav-link" href="#!">Contáctenos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#!">Michi-AI</a></li>
+          </ul>
+      </div>
+  </div>
+  
+</nav>
+
+<br>
+
+<div class="container">
+  <div class="row">
+    <!-- Columna para la imagen -->
+    <div class="col-md-6">
+      <div class="image-container">
+        <!-- Aquí colocamos la imagen a la izquierda -->
+        <img src="{% static '\img\michitut-tu2t.png' %}" alt="Imagen del chatbot" class="img-fluid">
+      </div>
+    </div>
+    <!-- Columna para el chat -->
+    <div class="col-md-6">
+      <div class="chat-container">
+        <div class="card flex-grow-1">
+          <div class="card-header bg-primary text-white">Michi-AI</div>
+          <div class="card-body messages-box">
+            
+            <ul class="list-unstyled messages-list">
+              
+              <li class="message received">
+                <div class="message-text">
+                  <div class="message-sender">
+                    
+                  </div>
+                  <div class="message-content">
+                    Pregunta lo que quieras humano...
+                  </div>
+                </div>
+              </li>
+            </ul>
+            
+          </div>
+          
+        </div>
+        <!-- Columna para escribir el mensaje -->
+      
+          <form class="message-form">
+            {%csrf_token%}
+            <div class="input-group">
+              <input type="text" class="form-control message-input" placeholder="Type your message...">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-primary btn-send">Send</button>
+              </div>
+            </div>
+          </form>
+      </div>
+  </div>
+</div>
+</div>
+
+<div class="container my-5">
+
+<div class="card text-white bg-secondary my-5 py-4 text-center">
+  <div class="card-body"><p class="text-white m-0">Tecnologías usadas a lo largo del desarrollo del proyecto</p></div>
+</div>
+<!-- Content Row-->
+<div class="row gx-4 gx-lg-5">
+  <div class="col-md-4 mb-5">
+      <div class="card h-100">
+          <div class="card-body">
+              <h2 class="card-title">OpenIA</h2>
+              <p class="card-text">Se ha utilizado el modelo de lenguaje text-davinci-003 de OpenAI para implementar a "Michi-AI", un chatbot con capacidad de respuesta corta, sarcástica e irónica. Este modelo utiliza la técnica de aprendizaje profundo para generar respuestas en función del contexto y las preguntas proporcionadas.</p>
+          </div>
+          <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Mas info</a></div>
+      </div>
+  </div>
+  <div class="col-md-4 mb-5">
+      <div class="card h-100">
+          <div class="card-body">
+              <h2 class="card-title">Django</h2>
+              <p class="card-text">Se ha utilizado para construir la estructura y lógica de tu página web, incluyendo la implementación del chatbot, la cabecera, pie de página y otros componentes. Django ofrece un enfoque práctico y eficiente para el desarrollo web, proporcionando herramientas para la gestión de bases de datos, autenticación de usuarios, manejo de formularios y más.</p>
+          </div>
+          <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Mas info</a></div>
+      </div>
+  </div>
+  <div class="col-md-4 mb-5">
+      <div class="card h-100">
+          <div class="card-body">
+              <h2 class="card-title">Aseprite</h2>
+              <p class="card-text">Es una herramienta de edición y animación de gráficos pixelados especialmente diseñada para la creación de arte 2D, sprites y animaciones. Se ha utilizado para dibujar y animar el gato que actúa como el avatar de "Michi-AI" durante las respuestas del chatbot. </p>
+          </div>
+          <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Mas info</a></div>
+      </div>
+  </div>
+</div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static '/js/scripts.js' %}"></script>
+{% endblock %}

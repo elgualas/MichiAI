@@ -1,0 +1,110 @@
+body, html {
+    height: 100%;
+  }
+
+  .messages-box {
+    flex: 1;
+    overflow-y: auto; /* Cambiamos "overflow-y: auto;" para agregar la barra de desplazamiento */
+    max-height: 400px; /* Establecemos una altura máxima para la caja de chat */
+
+  }
+
+  .messages-list {
+    padding-left: 0;
+  }
+
+  .message {
+    margin-bottom: 15px;
+    list-style: none;
+  }
+
+  .message-text {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+  }
+
+  .received {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+  }
+
+  .message-form {
+    display: flex;
+    padding: 10px; /* Eliminamos las propiedades "bottom: 0;" y "left: 0;" para evitar conflictos */
+    background-color: #f8f9fa;
+  }
+
+  .message-input {
+    flex: 1;
+    border-radius: 0;
+    border-right: none;
+  }
+
+  .btn-send {
+    border-radius: 0;
+  }
+
+  .chat-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+/* Estilos generales para la cabecera */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+}
+
+/* Estilos para el logo */
+.logo img {
+  height: 40px; /* Ajusta el tamaño del logo según tus necesidades */
+}
+
+/* Estilos para los botones de navegación */
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navigation li {
+  margin-left: 15px;
+}
+
+.navigation li:first-child {
+  margin-left: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.navigation a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* CSS personalizado para el logo */
+.logo-img {
+  height: 40px; /* Ajusta el tamaño del logo según tus necesidades */
+}
+
+.container {
+  margin: 0 auto; /* Centrar el contenido horizontalmente */
+  max-width: 1200px; /* Ajusta el ancho máximo del contenido según tus necesidades */
+  padding: 20px; /* Agrega el margen deseado al contenido */
+}
